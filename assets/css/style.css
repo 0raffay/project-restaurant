@@ -1,0 +1,443 @@
+*{
+    margin: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hind', sans-serif;
+    line-height: 1.4;
+}
+
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+section{
+    padding: 120px 0;
+}
+
+section > .container > h4{
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    margin-bottom: 70px;
+    letter-spacing: 2px;
+}
+
+section > .container > h4::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    width: 40px;
+    z-index: 26;
+    background-color: #FFB119;
+    margin: auto;
+    border-radius: 3px;
+
+}
+
+p{
+    font-size: 15px;
+    color: #ddd;
+}
+
+
+.section-small{
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-content-space {
+    justify-content: space-between;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.text-transform-none{
+    text-transform: none;
+}
+
+.btn {
+    padding: 10px 35px;
+    border-radius: 30px;
+    font-size: 16px;
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.btn-primary {
+    background-color: #FFB119;
+    color: #333;
+}
+
+.btn-inverse {
+    background-color: #333;
+    color: #FFB119;
+}
+
+
+.gap-5 {
+    gap: 5px;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-15 {
+    gap: 15px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.gap-30 {
+    gap: 30px;
+}
+
+.gap-50 {
+    gap: 50px;
+}
+
+.gap-100 {
+    gap: 100px;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.mr-5 {
+    margin-right: 5px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.px-30 {
+    padding: 30px 0;
+}
+
+
+header{
+    padding: 30px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 21;
+}
+
+header .container{
+    align-items: flex-end;
+}
+
+
+.logo img{
+    width: 200px;
+}
+
+.nav-list li{
+    display: inline-block;
+    padding: 10px 10px;
+    margin-right: 7px;
+    position: relative;
+}
+
+.nav-list a::after{
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out ;
+}
+
+.nav-list  a:hover::after{
+    width: 100%;
+}
+
+.nav-list a{
+    color: #fff8ee;
+    text-transform: capitalize;
+    font-weight: medium;
+}
+
+.main{
+    height: 100vh;
+    position: relative;
+    /* background: url(../images/background-3.jpg), linear-gradient(180deg, rgba(0,0,0,0.7) 50%, transparent); */
+    background: url(../images/background-3.jpg), rgba(0,0,0,0.7);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main .container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    text-align: center;
+}
+
+.main h1{
+    font-size: 75px;
+    color: #d9d9d9;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.main h2{
+    font-size: 50px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #FFB119;
+    margin-bottom: 20px;
+}
+
+.main .btn:hover{
+    background-color: #FFB119;
+    color: #333;
+}
+/* Reservation */
+
+
+.reservation{
+    background-color: #282323;
+}
+
+.reservation h2{
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #fff8ee;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+/* Reservations */
+
+
+/* Menu */
+
+.menu{
+    background-color: #333;
+}
+
+.menu-card{
+    width: 40%;
+    color: #fff8ee;
+    letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 30px 10px;
+    border: 1px solid #ddd;
+}
+
+.menu .container > .flex{
+    margin-bottom: 50px;
+}
+
+.menu-card h5{
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.menu-card p{
+    margin-bottom: 10px;
+}
+.menu-card h6{
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.menu-card img{
+    width: 110px;
+    height: 100px;
+}
+
+.menu a{
+    font-size: 16px;
+    color: #FFB119;
+    font-weight: 600;
+}
+
+.menu a:hover{
+    color: #fff;
+}
+
+/* We serve */
+
+.serve{
+    background-color: #282323;
+}
+
+.serve-card{
+    width: 30%;
+    text-align: center;
+}
+
+.serve-card img{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 22px;
+}
+
+.serve-card h5{
+    font-size: 26px;
+    color: #fff8ee;
+    text-transform: capitalize;
+    color: #fff8ee;
+    margin-bottom: 15px;
+}
+
+
+/* services */
+
+.services{
+    background-color: #333;
+}
+
+.service-card i{
+    font-size: 100px;
+    color: #FFB119;
+    margin-bottom: 25px;
+}
+
+.service-card h5{
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff8ee;
+    text-transform: capitalize;
+
+}
+
+/* gallery */
+
+.gallery{
+    background-color: #282323;
+}
+
+.gallery .container{
+    padding: 10px 0;
+}
+
+
+.gallery-slider .flex > div{
+    background-color: #000;
+    width: 300px;
+    height: 120px;
+}
+
+.gallery-slider .flex > div > img{
+    width: 300px;
+    height: 120px;
+    background-color: #000;
+    opacity: 0.9;
+}
+
+
+/* footer */
+
+footer{
+    background-color: #333;
+    padding: 80px 0;
+}
+
+footer .container > .flex > div{
+    width: 33.3%;
+}
+
+footer .container > .flex > div h6{
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
