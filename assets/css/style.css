@@ -15,7 +15,7 @@
 
 body {
     font-family: 'Hind', sans-serif;
-    line-height: 1.4;
+    line-height: 1.7;
 }
 
 
@@ -42,6 +42,14 @@ ul {
 
 img{
     max-width: 100%;
+}
+
+input{
+    display: block;
+}
+
+button{
+    cursor: pointer;
 }
 
 
@@ -397,7 +405,7 @@ header .container{
     font-weight: 500;
     color: #fff8ee;
     text-transform: capitalize;
-
+    
 }
 
 /* gallery */
@@ -427,17 +435,149 @@ header .container{
 
 /* footer */
 
-footer{
+.top-footer{
     background-color: #333;
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
-footer .container > .flex > div{
-    width: 33.3%;
+.top-footer .container > .flex > div:nth-child(1){
+    width: 25%;
 }
 
-footer .container > .flex > div h6{
-    color: #fff;
-    font-size: 18px;
+.top-footer .container > .flex > div h6{
+    /* color: #fff8ee; */
+    color: #FFB119;
+    font-size: 16px;
+    opacity: 0.9;
     margin-bottom: 20px;
 }
+.top-footer .container > .flex > div p{
+    font-size: 14px;
+    color: #fff8ee;
+}
+
+.top-footer .container > .flex > div:nth-child(3) i{
+    font-size: 20px;
+    color: #fff8ee;
+}
+
+.top-footer .container > .flex > div:nth-child(4) i{
+    font-size: 12px;
+    color: #fff8ee;
+}
+
+.top-footer .container > .flex > div:nth-child(4) ul li{
+    margin-bottom: 10px;
+}
+
+.top-footer .container > .flex > div:nth-child(4) a{
+    color: #fff8ee;
+}
+
+.bottom-footer{
+    background: #444;
+    padding: 15px 0;
+}   
+
+.footer-nav-list a{
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer-nav-list a:after{
+    display: none;
+}
+
+.bottom-footer p{
+    font-size: 13px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+
+/* homepage end*/
+
+
+
+/* contact page */
+
+
+.contact-main{
+    background-color: #282323;
+    background: url(../images/background-3.jpg), rgba(0,0,0,0.7);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply ;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 400px 0 400px 0;
+}
+
+::placeholder{
+    color: #FFB119;
+    font-weight: 500;
+    letter-spacing: 1px;
+    /* font-size: 5px; */
+}
+
+.contact-main form input, 
+.contact-main form textarea{
+    border: 1px solid #FFf;
+    color: #fff;
+    background-color: transparent;
+    width: 950px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-main form textarea{
+    font-family: 'Hind', sans-serif;
+    height: 200px;
+}
+
+/* contact end */
+
+
+/* about us */
+
+
+
+.about-main{
+    background: linear-gradient(90deg, #333 50%, #eab533 50%), rgba(0,0,0,0.2);
+    background-blend-mode: multiply;
+    height: 100vh;
+}
+
+.about-main .container{
+    height: 100%;
+    display: flex;
+}
+
+.about-main img{
+    position: absolute;
+    bottom: 0;
+    height: 600px;
+}
+
+.about-text{
+    padding: 0 0 0 200px ;
+    align-self: center;
+}
+
+.about-text h1{
+    font-size: 45px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.about-text p{
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 500;
+}   
+
