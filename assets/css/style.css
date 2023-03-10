@@ -583,39 +583,65 @@ header .container{
     font-weight: 500;
 }   
 
-
-/* Gallery */
-
-body.gallery header{
-    background: #242424;
-    padding: 20px 0;
-
-}
-
-.gallery-main .container > h4{
-    color: #000;
-    margin: 50px 0;
-}
-
-
-.gallery-main{
-    background-color: #fff;
-}
-
-.gallery-container{
+/* Gallery and awards*/
+/* secondary-page-design */
+.secondary-page-container{
     max-width: 90%;
-    background: #fff;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     padding: 10px 10px;
-    row-gap: 20px;
-}    
+    gap: 20px;
+}
+
+.secondary-page-header{
+    background: #242424;
+    padding: 20px 0;
+}
+
+.secondary-page-main{
+    background-color: #fff;
+}
+
+section > .container > h4{
+    color: #000;
+    margin: 50px 0;
+}
+
+.awards-container,
+.meals-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+}
 
 .gallery-container img{
     width: 280px;
     height: 120px;
     border-radius: 8px;
 }
+
+
+/* meals */
+
+.meals-card{
+    text-align: center;
+}
+.meals-card img{
+    max-width: 90%;
+    margin-bottom: 10px;
+}
+
+.meals-card h5{
+    font-size: 18px;
+    color: #000;
+}
+
+.meals-card a{
+    color: red;
+    font-weight: 700;
+    font-size: 12px;
+}
+
