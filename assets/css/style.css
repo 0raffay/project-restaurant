@@ -572,7 +572,9 @@ header .container{
 .about-text h1{
     font-size: 45px;
     font-weight: 600;
+    color: #000;
     letter-spacing: 4px;
+    position: relative;
 }
 
 .about-text p{
@@ -581,3 +583,39 @@ header .container{
     font-weight: 500;
 }   
 
+
+/* Gallery */
+
+body.gallery header{
+    background: #242424;
+    padding: 20px 0;
+
+}
+
+.gallery-main .container > h4{
+    color: #000;
+    margin: 50px 0;
+}
+
+
+.gallery-main{
+    background-color: #fff;
+}
+
+.gallery-container{
+    max-width: 90%;
+    background: #fff;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 10px;
+    row-gap: 20px;
+}    
+
+.gallery-container img{
+    width: 280px;
+    height: 120px;
+    border-radius: 8px;
+}
