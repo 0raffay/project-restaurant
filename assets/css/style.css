@@ -259,12 +259,12 @@ header .container{
 .main{
     height: 100vh;
     position: relative;
-    /* background: url(../images/background-3.jpg), linear-gradient(180deg, rgba(0,0,0,0.7) 50%, transparent); */
+    background: url(../images/background-3.jpg), linear-gradient(180deg, rgba(0,0,0,0.7) 50%, transparent);
     background: url(../images/background-3.jpg), rgba(0,0,0,0.7);
     background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
 }
 
 .main .container{
@@ -427,7 +427,7 @@ header .container{
 
 .gallery-slider .flex > div > img{
     width: 300px;
-    height: 120px;
+    height: 145px;
     background-color: #000;
     opacity: 0.9;
 }
@@ -502,7 +502,7 @@ header .container{
 
 
 /* contact page */
-
+/* 
 
 .contact-main{
     background-color: #282323;
@@ -516,10 +516,12 @@ header .container{
     align-items: center;
     justify-content: center;
     padding: 400px 0 400px 0;
-}
+} */
+
+
 
 ::placeholder{
-    color: #FFB119;
+    /* color: #dd1911; */
     font-weight: 500;
     letter-spacing: 1px;
     /* font-size: 5px; */
@@ -527,11 +529,11 @@ header .container{
 
 .contact-main form input, 
 .contact-main form textarea{
-    border: 1px solid #FFf;
-    color: #fff;
+    border: 2px solid #000;
+    color: #000;
     background-color: transparent;
     width: 950px;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 20px;
 }
 
@@ -548,7 +550,7 @@ header .container{
 
 
 .about-main{
-    background: linear-gradient(90deg, #333 50%, #eab533 50%), rgba(0,0,0,0.2);
+    background: linear-gradient(90deg, #333 50%, #fff 50%), rgba(0,0,0,0.2);
     background-blend-mode: multiply;
     height: 100vh;
 }
@@ -556,6 +558,7 @@ header .container{
 .about-main .container{
     height: 100%;
     display: flex;
+    justify-content: right;
 }
 
 .about-main img{
@@ -565,9 +568,13 @@ header .container{
 }
 
 .about-text{
-    padding: 0 0 0 200px ;
     align-self: center;
+    padding: 0px 40px 0 70px;
+    justify-self: right ;
+    width: 50%;
+    margin-top: 100px;
 }
+
 
 .about-text h1{
     font-size: 45px;
@@ -579,7 +586,7 @@ header .container{
 
 .about-text p{
     margin-bottom: 20px;
-    color: #fff;
+    color: #000;
     font-weight: 500;
 }   
 
@@ -605,7 +612,7 @@ header .container{
     background-color: #fff;
 }
 
-section > .container > h4{
+.secondary-page-main >  .container > h4{
     color: #000;
     margin: 50px 0;
 }
@@ -614,7 +621,16 @@ section > .container > h4{
 .meals-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
+    margin: 0 auto;
+}
+
+.awards-container{
+    gap: 30px;
+}
+
+.awards-container img{
+    display: block;
+    margin: auto;
 }
 
 .gallery-container img{
@@ -630,7 +646,8 @@ section > .container > h4{
     text-align: center;
 }
 .meals-card img{
-    max-width: 90%;
+    max-width: 400px;
+    height: 200px;  
     margin-bottom: 10px;
 }
 
@@ -640,8 +657,75 @@ section > .container > h4{
 }
 
 .meals-card a{
-    color: red;
+    color: #FFB119;
     font-weight: 700;
     font-size: 12px;
 }
+
+
+
+
+/* ?catering */
+
+body.catering .catering-content{
+    flex-basis: 50%;
+}
+
+.catering-content h6{
+    color: #FFB119;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.catering-content h1{
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.catering-content + div img{
+    height: 250px;
+    scale: 2;
+}
+
+.catering-content p{
+    font-size: 16px;
+    color: #242424;
+}
+
+
+/* catering end */
+
+
+/* ?Recipe */
+
+.recipe-container{
+    padding: 50px 0;
+}
+
+.recipe-container h5{
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #242424;
+}
+
+.recipe-img img{
+    max-height: 600px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.recipe-img{
+    margin-bottom: 20px;
+}
+
+.recipe-text{
+    color: #242424;
+}
+
+
+
+
+
+/* ?Recipe End */
 
