@@ -13,6 +13,23 @@
     box-sizing: border-box;
 }
 
+:root{
+
+    --clr-primary: #fff;
+    --clr-secondary: #FFB119 ;
+    --clr-light: #ddd;
+
+
+    --clr-dark-700: #242424;
+    --clr-dark-400: #333;
+
+    --fs-section-heading: 30px;
+    --fs-700: 28px;
+    --fs-600: 22px;
+    --fs-500: 18px
+    --fs-400: 16px 
+}
+
 body {
     font-family: 'Hind', sans-serif;
     line-height: 1.7;
@@ -52,13 +69,12 @@ button{
     cursor: pointer;
 }
 
-
 section{
     padding: 120px 0;
 }
 
 section > .container > h4{
-    font-size: 30px;
+    font-size: var(--fs-section-heading);
     color: #fff;
     text-align: center;
     position: relative;
@@ -75,15 +91,15 @@ section > .container > h4::after{
     height: 4px;
     width: 40px;
     z-index: 26;
-    background-color: #FFB119;
+    background-color: var(--clr-secondary);
     margin: auto;
     border-radius: 3px;
 
 }
 
 p{
-    font-size: 15px;
-    color: #ddd;
+    font-size: var(--fs-400);
+    color: var(--clr-light);
 }
 
 
@@ -138,13 +154,13 @@ p{
 }
 
 .btn-primary {
-    background-color: #FFB119;
-    color: #333;
+    background-color: var(--clr-secondary);
+    color: var(--clr-dark-400);
 }
 
 .btn-inverse {
-    background-color: #333;
-    color: #FFB119;
+    background-color: var(--clr-dark-400);
+    color: var(--clr-secondary);
 }
 
 
@@ -208,6 +224,7 @@ p{
     padding: 30px 0;
 }
 
+/* Nav-bar */
 
 header{
     padding: 30px 0;
@@ -256,11 +273,70 @@ header .container{
     font-weight: medium;
 }
 
+
+.burger-icon {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    z-index: 20;
+    display: none;
+}
+
+
+.burger-icon div{
+    width: 35px ;
+    height: 5px;
+    background-color: var(--clr-secondary);
+    margin-bottom: 6px;
+    border-radius: 3px;
+}
+
+
+@media (max-width: 767px){
+
+    .burger-icon{
+        display: block;
+        z-index: 100;
+    }
+
+    header{
+        padding: 0;
+        transition: display 0.2s ease-in-out;
+    }
+
+    .nav-list{
+        display: none;
+    }
+
+    header .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--clr-dark-700);
+    }
+
+    .logo{
+        padding: 20px 0;
+    }
+    
+    header .nav-list {
+        background-color: var(--clr-dark-700);
+    }
+
+    header .nav-list li{
+        display: block;
+        text-align: center;
+        padding: 20px 0;
+    }
+}
+
+/* ?NAVBAR */
+
 .main{
     height: 100vh;
     position: relative;
     background: url(../images/background-3.jpg), linear-gradient(180deg, rgba(0,0,0,0.7) 50%, transparent);
-    background: url(../images/background-3.jpg), rgba(0,0,0,0.7);
+    background: url(../images/background-3.jpg), rgba(0,0,0,0.5);
     background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
@@ -292,22 +368,22 @@ header .container{
 }
 
 .main .btn:hover{
-    background-color: #FFB119;
-    color: #333;
+    background-color: var(--clr-secondary);
+    color: var(--clr-dark-400);
 }
 /* Reservation */
 
 
 .reservation{
-    background-color: #282323;
+    background-color: var(--clr-dark-700);
 }
 
 .reservation h2{
     font-size: 18px;
     letter-spacing: 1px;
-    color: #fff8ee;
-    text-transform: capitalize;
+    color: var(--clr-primary);
     font-weight: 600;
+    text-transform: capitalize;
 }
 
 /* Reservations */
@@ -316,16 +392,16 @@ header .container{
 /* Menu */
 
 .menu{
-    background-color: #333;
+    background-color: var(--clr-dark-400);
 }
 
 .menu-card{
     width: 40%;
-    color: #fff8ee;
+    color: var(--clr-primary);
     letter-spacing: 1px;
     background-color: rgba(0, 0, 0, 0.1);
     padding: 30px 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--clr-light);
 }
 
 .menu .container > .flex{
@@ -333,18 +409,17 @@ header .container{
 }
 
 .menu-card h5{
-    font-size: 22px;
-    margin-bottom: 15px;
+    font-size: var(--fs-500);
+    margin-bottom: 10px;
     font-weight: 600;
-    text-transform: capitalize;
 }
 
 .menu-card p{
     margin-bottom: 10px;
 }
+
 .menu-card h6{
-    font-size: 16px;
-    text-transform: capitalize;
+    font-size: var(--fs-400);
 }
 
 .menu-card img{
@@ -353,19 +428,19 @@ header .container{
 }
 
 .menu a{
-    font-size: 16px;
-    color: #FFB119;
+    font-size: var(--fs-400);
+    color: var(--clr-secondary);
     font-weight: 600;
 }
 
 .menu a:hover{
-    color: #fff;
+    color: var(--clr-primary);
 }
 
 /* We serve */
 
 .serve{
-    background-color: #282323;
+    background-color: var(--clr-dark-700);
 }
 
 .serve-card{
@@ -376,42 +451,41 @@ header .container{
 .serve-card img{
     width: 100%;
     height: 200px;
-    margin-bottom: 22px;
 }
 
 .serve-card h5{
-    font-size: 26px;
-    color: #fff8ee;
-    text-transform: capitalize;
-    color: #fff8ee;
-    margin-bottom: 15px;
+    font-size: var(--fs-600);
+    color: var(--clr-primary);
+    margin-bottom: 20px;
 }
 
 
 /* services */
 
 .services{
-    background-color: #333;
+    background-color: var(--clr-dark-400);
 }
 
 .service-card i{
     font-size: 100px;
-    color: #FFB119;
+    color: var(--clr-secondary);
     margin-bottom: 25px;
 }
 
 .service-card h5{
-    font-size: 22px;
+    font-size: var(--fs-600);
     font-weight: 500;
-    color: #fff8ee;
+    color: var(--clr-primary);
     text-transform: capitalize;
+    margin-bottom: 10px;
     
 }
 
 /* gallery */
 
 .gallery{
-    background-color: #282323;
+    background-color: var(--clr-dark-700);
+    padding: 50px 0;
 }
 
 .gallery .container{
@@ -422,12 +496,12 @@ header .container{
 .gallery-slider .flex > div{
     background-color: #000;
     width: 300px;
-    height: 120px;
+    height: 130px;
 }
 
 .gallery-slider .flex > div > img{
     width: 300px;
-    height: 145px;
+    height: 130px;
     background-color: #000;
     opacity: 0.9;
 }
@@ -436,7 +510,7 @@ header .container{
 /* footer */
 
 .top-footer{
-    background-color: #333;
+    background-color: var(--clr-dark-400);
     padding: 100px 0;
 }
 
@@ -445,9 +519,8 @@ header .container{
 }
 
 .top-footer .container > .flex > div h6{
-    /* color: #fff8ee; */
-    color: #FFB119;
-    font-size: 16px;
+    color: var(--clr-secondary);
+    font-size: var(--fs-400);
     opacity: 0.9;
     margin-bottom: 20px;
 }
@@ -521,10 +594,8 @@ header .container{
 
 
 ::placeholder{
-    /* color: #dd1911; */
     font-weight: 500;
     letter-spacing: 1px;
-    /* font-size: 5px; */
 }
 
 .contact-main form input, 
@@ -547,32 +618,11 @@ header .container{
 
 /* about us */
 
-
-
-.about-main{
-    background: linear-gradient(90deg, #333 50%, #fff 50%), rgba(0,0,0,0.2);
-    background-blend-mode: multiply;
-    height: 100vh;
-}
-
-.about-main .container{
-    height: 100%;
-    display: flex;
-    justify-content: right;
-}
-
-.about-main img{
-    position: absolute;
-    bottom: 0;
-    height: 600px;
-}
-
 .about-text{
     align-self: center;
-    padding: 0px 40px 0 70px;
-    justify-self: right ;
-    width: 50%;
-    margin-top: 100px;
+    max-width:70%;
+    margin: 0 auto;
+    margin-top: 40px;
 }
 
 
@@ -604,12 +654,13 @@ header .container{
 }
 
 .secondary-page-header{
-    background: #242424;
+    background: var(--clr-dark-700);
     padding: 20px 0;
+    z-index: 99;
 }
 
 .secondary-page-main{
-    background-color: #fff;
+    background-color: var(--clr-primary);
 }
 
 .secondary-page-main >  .container > h4{
@@ -652,12 +703,12 @@ header .container{
 }
 
 .meals-card h5{
-    font-size: 18px;
+    font-size: var(--fs-500);
     color: #000;
 }
 
 .meals-card a{
-    color: #FFB119;
+    color: var(--clr-secondary);
     font-weight: 700;
     font-size: 12px;
 }
@@ -672,9 +723,9 @@ body.catering .catering-content{
 }
 
 .catering-content h6{
-    color: #FFB119;
+    color: var(--clr-secondary);
     font-weight: 600;
-    font-size: 22px;
+    font-size: var(--fs-600);
     letter-spacing: 2px;
 }
 
@@ -689,8 +740,8 @@ body.catering .catering-content{
 }
 
 .catering-content p{
-    font-size: 16px;
-    color: #242424;
+    font-size: var(--fs-400);
+    color: var(--clr-dark-700);
 }
 
 
@@ -704,9 +755,9 @@ body.catering .catering-content{
 }
 
 .recipe-container h5{
-    font-size: 28px;
+    font-size: var(--fs-700);
     margin-bottom: 20px;
-    color: #242424;
+    color: var(--clr-dark-700);
 }
 
 .recipe-img img{
@@ -720,12 +771,157 @@ body.catering .catering-content{
 }
 
 .recipe-text{
-    color: #242424;
+    color: var(--clr-dark-700);
 }
-
-
-
-
 
 /* ?Recipe End */
 
+
+
+/* !Tablet Styles */
+
+@media (max-width: 767px){
+
+    .btn{
+        font-size: var(--fs-400);
+        padding: 8px 30px;
+    }
+
+    :root{
+        --fs-400: 12px;
+        --fs-500: 16px;
+        --fs-600: 20px;
+        --fs-section-heading: 22px;
+    }
+
+    .main h1{
+        font-size: 48px;
+    }
+
+    .main h2{
+        font-size: 30px;
+    }
+
+    .reservation h2{
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .menu .container > .flex{
+        /* flex-direction: column; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .menu-card{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .serve .container > .flex {
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+    }
+
+    .serve-card{
+        width: 70%;
+        margin-bottom: 30px;
+    }
+
+    .serve-card h5{
+        margin-bottom: 10px;
+    }
+
+    .serve-card img{
+        width: 80%;
+    }
+
+
+    .services .container > .flex{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-card{
+        margin-bottom: 30px;
+    }
+
+    .service-card i{
+        font-size: 60px;
+    }
+
+    .service-card h5{
+        font-size: var(--fs-500);
+    }
+
+
+    .gallery{
+        display: none;
+    }
+
+    .top-footer{
+        background-color: var(--clr-dark-700);
+    }
+
+    .top-footer .container > .flex{
+        display: grid;
+        grid-template-columns: 1fr;
+    } 
+
+    .top-footer .container > .flex div {
+        width: 100% !important;
+    }
+
+    .bottom-footer{
+        display: none;
+    }
+
+
+    .about-text h1{
+        font-size: 2rem;
+    }
+
+    .gallery-container img{
+        margin-bottom: 20px;
+    }
+
+
+    .awards-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .awards-container img{
+        max-width: 100%;
+    }
+
+    .catering-container > .flex {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .catering-content{
+        grid-row: 2;
+    }
+
+    .catering-img{
+        grid-row: 1;
+        margin: 0 auto;
+    }
+
+
+    .catering-content{
+        text-align: center;
+    }
+
+    .catering-img img{  
+        scale: 1.5 !important;
+        margin-bottom: 30px;
+    }
+
+}   
