@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,17 +21,16 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- jquery crousel -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
-        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="assets/js/jquery.js"></script>
 
-    <!-- script file -->
+
     <link rel="icon" type="image/x-icon" href="assets/images/logo.svg">
- 
-
     <title>Home</title>
 </head>
 
@@ -53,7 +52,16 @@
                 <ul class="nav-list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="meals.html">Meals</a></li>
+                    <li>
+                        <a href="meals.html">Meals</a>
+                        <ul class="meal-list">
+                            <li><a href="menu-1-regular-sp.html">Regular</a></li>
+                            <li><a href="menu-2-lunch-sp.html">Lunch</a></li>
+                            <li><a href="menu-3-snacks-sp.html">Snacks</a></li>
+                            <li><a href="menu-4-desserts-sp.html">Desserts</a></li>
+                            <li><a href="menu-5-beverages-sp.html">Beverages</a></li>
+                        </ul>
+                    </li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="awards.html">Awards</a></li>
                     <li><a href="catering.html">Catering</a></li>
@@ -74,6 +82,14 @@
                 <a href="#" class="btn btn-inverse">Read More</a>
             </div>
         </div>
+        <!-- <div class="main-slider">
+                <img src="assets/images/beverages-3-min.jpg" alt="">
+                <img src="assets/images/beverages-3-min.jpg" alt="">
+                <img src="assets/images/beverages-3-min.jpg" alt="">
+                <img src="assets/images/beverages-3-min.jpg" alt="">
+        </div> -->
+
+   
     </section>
 
 
@@ -81,7 +97,7 @@
         <div class="container">
             <div class="flex justify-content-space align-items-center">
                 <h2>Make a Reservation. Enjoy the Deliciousness.</h2>
-                <a href="contact.html" class="btn btn-inverse">Contact Us</a>
+                <a href="contact.html" class="btn btn-inverse">Contact</a>
             </div>
         </div>
     </section>
@@ -98,7 +114,7 @@
                         <h6>Rs.1200</h6>
                     </div>
                     <div>
-                        <img src="assets/images/menu-1.jpg" alt="FoodImage">
+                        <img src="assets/images/lunch-6-min.jpg" alt="FoodImage">
                     </div>
                 </div>
                 <div class="menu-card flex justify-content-around">
@@ -108,7 +124,7 @@
                         <h6>Rs.660</h6>
                     </div>
                     <div>
-                        <img src="assets/images/menu-2.jpg" alt="FoodImage">
+                        <img src="assets/images/snacks-4-min.jpg" alt="FoodImage">
                     </div>
                 </div>
             </div>
@@ -120,7 +136,7 @@
                         <h6>Rs.339</h6>
                     </div>
                     <div>
-                        <img src="assets/images/menu-3.jpg" alt="FoodImage">
+                        <img src="assets/images/desserts-2-min.jpg" alt="FoodImage">
                     </div>
                 </div>
                 <div class="menu-card flex justify-content-around">
@@ -130,7 +146,7 @@
                         <h6>Rs.320</h6>
                     </div>
                     <div>
-                        <img src="assets/images/menu-4.jpg" alt="FoodImage">
+                        <img src="assets/images/beverages-6-min.jpg" alt="FoodImage">
                     </div>
                 </div>
             </div>
@@ -148,17 +164,17 @@
 
             <div class="flex justify-content-space gap-20">
                 <div class="serve-card">
-                    <img src="assets/images/Starters.png" alt="food">
+                    <img src="assets/images/lunch-3-min.jpg" alt="food">
                     <h5>Starters</h5>
                     <p>We are known for our Lip Smacking Starters.</p>
                 </div>
                 <div class="serve-card">
-                    <img src="assets/images/main-course.png" alt="food">
+                    <img src="assets/images/snacks-3-min.jpg" alt="food">
                     <h5>Main Course</h5>
                     <p>Tantaise your taste buds with our wide variety of main course.</p>
                 </div>
                 <div class="serve-card">
-                    <img src="assets/images/desserts.png" alt="food">
+                    <img src="assets/images/desserts-3-min.jpg" alt="food">
                     <h5>desserts</h5>
                     <p>Satiate your palate and take yourself on a culinary treat.</p>
                 </div>
@@ -204,43 +220,23 @@
                 
                 <div class="flex justify-content-space gap-30">
                     <div>
-                        <img src="assets/images/gallery1.jpg" alt="">
+                        <img src="assets/images/lunch-3-min.jpg" alt="">
                     </div>
                     <div>
-                        <img src="assets/images/gallery2.jpg" alt="">
+                        <img src="assets/images/snacks-2-min.jpg" alt="">
                     </div>
                     <div>
-                        <img src="assets/images/gallery3.jpg" alt="">
+                        <img src="assets/images/desserts-7-min.jpg" alt="">
                     </div>
                     <div>
-                        <img src="assets/images/gallery4.jpg" alt="">
+                        <img src="assets/images/lunch-5-min.jpg" alt="">
                     </div>
                     <div>
-                        <img src="assets/images/gallery5jpg.jpg" alt="">
+                        <img src="assets/images/regular-7-min.jpg" alt="">
                     </div>
                 </div>
-<!-- 
-                <div class="flex justify-content-space gap-30">
-                    <div>
-                        <img src="assets/images/desserts.png" alt="">
-                    </div>
-                    <div>
-                        <img src="assets/images/main-course.png" alt="">
-                    </div>
-                    <div>
-                        <img src="assets/images/Starters.png" alt="">
-                    </div>
-                    <div>
-                        <img src="assets/images/background-2.jpg" alt="">
-                    </div>
-                    <div>
-                        <img src="assets/images/menu-3.jpg" alt="">
-                    </div>
-                </div> -->
             </div>
-
         </div>
-
     </section>
 
 
@@ -297,11 +293,11 @@
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="meals.html">Meals</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="#">Awards</a></li>
-                    <li><a href="#">Catering</a></li>
-                    <li><a href="#">Recipe Of the Month</a></li>
+                    <li><a href="awards.html">Awards</a></li>
+                    <li><a href="catering.html">Catering</a></li>
+                    <li><a href="recipe.html">Recipe Of the Month</a></li>
                     <li><a href="contact.html">Contact us</a></li>
-                    <li><a href="contact.html">Feedback</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
                 </ul>
 
                 <p>jadson ltd &#174;</p>

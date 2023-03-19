@@ -1,6 +1,4 @@
-*{
-    margin: 0;
-}
+/* Resets */
 
 * {
     padding: 0;
@@ -12,6 +10,8 @@
 *::before {
     box-sizing: border-box;
 }
+
+/* Variables */
 
 :root{
 
@@ -59,15 +59,15 @@ ul {
 
 img{
     max-width: 100%;
+    border-radius: 5px;
 }
 
-input{
-    display: block;
-}
 
 button{
     cursor: pointer;
 }
+
+/* Main Section PRESET */
 
 section{
     padding: 120px 0;
@@ -102,6 +102,37 @@ p{
     color: var(--clr-light);
 }
 
+/* Secondary Page Presets */
+/* secondary-page-design */
+.secondary-page-container{
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 10px;
+    gap: 20px;
+}
+
+.secondary-page-header{
+    background: var(--clr-dark-700);
+    padding: 20px 0;
+    z-index: 99;
+}
+
+.secondary-page-main{
+    background-color: var(--clr-primary);
+}
+
+.secondary-page-main >  .container > h4{
+    color: #000;
+    margin: 50px 0;
+}
+
+
+
+/* Utility Classes */
 
 .section-small{
     padding: 40px 0;
@@ -228,7 +259,7 @@ p{
 
 header{
     padding: 30px 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -257,14 +288,16 @@ header .container{
     display: block;
     bottom: 0;
     left: 0;
+    right: 0;
     width: 0;
+    margin: 0 auto;
     height: 2px;
     background-color: #fff;
     transition: all 0.3s ease-in-out ;
 }
 
 .nav-list  a:hover::after{
-    width: 100%;
+    width: 80%;
 }
 
 .nav-list a{
@@ -273,6 +306,40 @@ header .container{
     font-weight: medium;
 }
 
+
+/* Nav Sublinks */
+
+.nav-list li:nth-child(3) a::after{
+    display: none;
+}
+
+.nav-list li:nth-child(3):hover .meal-list{
+    display: block;
+}
+
+
+.meal-list{
+    position: absolute;
+    background-color: var(--clr-dark-400);
+    width: max-content;    
+    border-radius: 2px;
+    left: -14px;
+    top: 40px;
+    text-align: center;
+    height: auto;    
+    display: none;
+}
+
+.meal-list li{
+    display: block;
+    width: 100%;
+}
+
+.meal-list li:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Menu Icon */
 
 .burger-icon {
     position: absolute;
@@ -292,6 +359,8 @@ header .container{
 }
 
 
+/* Navbar Responsive */
+
 @media (max-width: 767px){
 
     .burger-icon{
@@ -301,7 +370,6 @@ header .container{
 
     header{
         padding: 0;
-        transition: display 0.2s ease-in-out;
     }
 
     .nav-list{
@@ -330,18 +398,35 @@ header .container{
     }
 }
 
-/* ?NAVBAR */
+
+/* ?NAVBAR END */
+
+/* Main Section */
+
 
 .main{
     height: 100vh;
     position: relative;
-    background: url(../images/background-3.jpg), linear-gradient(180deg, rgba(0,0,0,0.7) 50%, transparent);
+    /* background: url(../images/background-3.jpg), linear-gradient(180deg, rgba(0,0,0,0.7) 50%, transparent);
     background: url(../images/background-3.jpg), rgba(0,0,0,0.5);
     background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; 
+    position: relative;
+    background-color: #333; */
 }
+
+/* .main-slider{
+    background-color: #000;
+}
+
+.main-slider img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+} */
+
 
 .main .container{
     height: 100%;
@@ -349,8 +434,10 @@ header .container{
     align-items: center;
     justify-content: center;
     z-index: 20;
-    text-align: center;
+    text-align: center; 
+
 }
+
 
 .main h1{
     font-size: 75px;
@@ -371,9 +458,10 @@ header .container{
     background-color: var(--clr-secondary);
     color: var(--clr-dark-400);
 }
-/* Reservation */
 
 
+
+/* Reservation Section */
 .reservation{
     background-color: var(--clr-dark-700);
 }
@@ -386,10 +474,10 @@ header .container{
     text-transform: capitalize;
 }
 
-/* Reservations */
+/* Reservations End*/
 
 
-/* Menu */
+/* Menu Section */
 
 .menu{
     background-color: var(--clr-dark-400);
@@ -437,7 +525,10 @@ header .container{
     color: var(--clr-primary);
 }
 
-/* We serve */
+/* Menu End */
+
+
+/* We serve Section */
 
 .serve{
     background-color: var(--clr-dark-700);
@@ -451,6 +542,7 @@ header .container{
 .serve-card img{
     width: 100%;
     height: 200px;
+    border-radius: 5px;
 }
 
 .serve-card h5{
@@ -460,14 +552,21 @@ header .container{
 }
 
 
-/* services */
+/* We serve End */
+
+
+/* services Section*/
 
 .services{
     background-color: var(--clr-dark-400);
 }
 
+.serve-card img{
+    margin-bottom: 10px;
+}
+
 .service-card i{
-    font-size: 100px;
+    font-size: 70px;
     color: var(--clr-secondary);
     margin-bottom: 25px;
 }
@@ -481,7 +580,10 @@ header .container{
     
 }
 
-/* gallery */
+/* We Serve End */
+
+
+/* gallery Section */
 
 .gallery{
     background-color: var(--clr-dark-700);
@@ -505,6 +607,8 @@ header .container{
     background-color: #000;
     opacity: 0.9;
 }
+
+/* Gallery End */
 
 
 /* footer */
@@ -570,53 +674,44 @@ header .container{
 }
 
 
-/* homepage end*/
+/* ? homepage end*/
 
 
 
-/* contact page */
-/* 
-
-.contact-main{
-    background-color: #282323;
-    background: url(../images/background-3.jpg), rgba(0,0,0,0.7);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-blend-mode: multiply ;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 400px 0 400px 0;
-} */
-
-
+/* ? CONTACT PAGE */
 
 ::placeholder{
     font-weight: 500;
     letter-spacing: 1px;
 }
 
+.contact-main form{
+    display: block;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
 .contact-main form input, 
 .contact-main form textarea{
+    display: block;
     border: 2px solid #000;
     color: #000;
+    width: 100%;
     background-color: transparent;
-    width: 950px;
     padding: 12px;
+    margin: 0 auto;
     margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 .contact-main form textarea{
-    font-family: 'Hind', sans-serif;
     height: 200px;
 }
 
-/* contact end */
+/* Contact Page End */
 
 
-/* about us */
+/* About Page */
 
 .about-text{
     align-self: center;
@@ -640,36 +735,11 @@ header .container{
     font-weight: 500;
 }   
 
-/* Gallery and awards*/
-/* secondary-page-design */
-.secondary-page-container{
-    max-width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px 10px;
-    gap: 20px;
-}
 
-.secondary-page-header{
-    background: var(--clr-dark-700);
-    padding: 20px 0;
-    z-index: 99;
-}
 
-.secondary-page-main{
-    background-color: var(--clr-primary);
-}
+/* Awards Page */
 
-.secondary-page-main >  .container > h4{
-    color: #000;
-    margin: 50px 0;
-}
-
-.awards-container,
-.meals-container{
+.awards-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
@@ -684,6 +754,8 @@ header .container{
     margin: auto;
 }
 
+
+/* Gallery Page */
 .gallery-container img{
     width: 280px;
     height: 120px;
@@ -691,34 +763,89 @@ header .container{
 }
 
 
-/* meals */
 
-.meals-card{
+/* Meals Page*/
+
+
+.meals-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    row-gap: 20px;
+}
+
+.meals-card {
     text-align: center;
 }
+
 .meals-card img{
-    max-width: 400px;
+    width:300px;
     height: 200px;  
     margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.meals-card:nth-of-type(4) img,
+.meals-card:nth-of-type(5) img{
+    width: 350px;
 }
 
 .meals-card h5{
-    font-size: var(--fs-500);
+    font-size: var(--fs-600);
+    font-weight: 600;
     color: #000;
 }
 
 .meals-card a{
     color: var(--clr-secondary);
     font-weight: 700;
-    font-size: 12px;
+    font-size: var(--fs-400);
+}
+
+/* Meals Subpage */
+
+.menu-item-container{
+	display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 50px;
+}
+
+.menu-item {
+    flex-basis: 30%;
+	margin: 10px;
+    padding: 10px 0;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.menu-item img {
+    border-radius: 10px;
+	margin: 0 auto;
+    margin-bottom: 10px;
+	width: 100%;
+	height: 200px;
+}
+
+.menu-item h2 {
+	margin: 0;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.menu-item p {
+	margin: 0;
+    color: #333;
+	font-size: 14px;
+	line-height: 1.5;
 }
 
 
 
+/* Catering Page */
 
-/* ?catering */
-
-body.catering .catering-content{
+.catering-content{
     flex-basis: 50%;
 }
 
@@ -745,10 +872,10 @@ body.catering .catering-content{
 }
 
 
-/* catering end */
+/* Catering end */
 
 
-/* ?Recipe */
+/* Recipe Page */
 
 .recipe-container{
     padding: 50px 0;
@@ -777,8 +904,65 @@ body.catering .catering-content{
 /* ?Recipe End */
 
 
+/* ?Feedback Page*/
 
-/* !Tablet Styles */
+.feedback-container form {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.feedback-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.feedback-container input[type="text"],
+.feedback-container  input[type="email"],
+.feedback-container  input[type="tel"],
+ .feedback-container input[type="date"],
+.feedback-container  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.feedback-container textarea {
+    height: 100px;
+}
+
+.feedback-container input[type="radio"] {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.feedback-container input[type="submit"] {
+    background-color: var(--clr-secondary);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+    color: #fff;
+}
+
+/* Pages End */
+
+
+/* ==================================================== */
+
+
+/* Tablet Styles */
 
 @media (max-width: 767px){
 
@@ -846,6 +1030,7 @@ body.catering .catering-content{
     }
 
     .service-card{
+        width: 100%;
         margin-bottom: 30px;
     }
 
@@ -924,4 +1109,66 @@ body.catering .catering-content{
         margin-bottom: 30px;
     }
 
+    .menu-item-container{
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-item img{
+        width: 80%;
+    }
+
+    .feedback-container form{
+        width: 80%;
+    }
+
 }   
+
+/* mobile Styles */
+
+
+@media (max-width: 480px){
+    :root{
+        --fs-400: 11px;
+        --fs-500: 15px;
+        --fs-600: 20px;
+        --fs-section-heading: 22px;
+    }
+
+    .main h1{
+        font-size: 42px;
+    }
+
+    .main h2{
+        font-size: 28px;    
+    }
+
+    .reservation h2{
+        font-size: 12px;
+    }
+
+    .btn{
+        padding: 10px 20px;
+    }   
+
+    .menu .container > .flex{
+        grid-template-columns: 1fr;
+    }
+
+    .serve-card img{
+        width: 100%;
+        height: 180px;
+    }
+
+
+    .service-card i{
+        font-size: 70px;
+    }
+
+    .services .container > .flex{
+        grid-template-columns: 1fr;
+    }
+
+    .feedback-container form{
+        width: 100%;
+    }
+}
