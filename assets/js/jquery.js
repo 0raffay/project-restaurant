@@ -1,46 +1,41 @@
-// $(document).ready(function(){
-//     slicksliders()
-// })
-
-// function slicksliders() {
-//     $('.main-slider').slick({
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//         autoplay: true,
-//         autoplaySpeed: 1000,
-//         arrows: false,
-//         dots: true,
-//         Infinity: true,
-//     })
-//     console.log('raffay')
-// }
-
-// $(document).ready(function() {
-//     // Array of image URLs  
-//     var images = ["../images/desserts-4-min.jpg", "../images/beverages-3-min.jpg",  "../images/lunch-4-min.jpg", "../images/snacks-2-min.jpg", "../images/desserts-5-min.jpg",];
-  
-//     // Set initial background image
-//     $('.main').css('background', 'url(' + images[0] + ')');
-  
-//     // Set interval to change background image
-//     var interval = setInterval(function() {
-//       var randomIndex = Math.floor(Math.random() * images.length);
-//       $('.main').fadeOut(500, function() {
-//         $(this).css('background', 'url(' + images[randomIndex] + ')').fadeIn('fast');
-//       });
-//     }, 1000); // Change image every 5 seconds (5000ms)
-  
-//     // Stop interval on hover
-//     $('.main').hover(function() {
-//       clearInterval(interval);
-//     }, function() {
-//       interval = setInterval(function() {
-//         var randomIndex = Math.floor(Math.random() * images.length);
-//         $('.main').fadeOut("fast", function() {
-//           $(this).css('background', 'url(' + images[randomIndex] + ')').fadeIn('fast');
-//         });
-//       }, 1000);
-//     });
-//   });
 
 
+// main background switcher
+$(document).ready(function() {
+  backgroundSwitcher()
+  slickSliders()
+});
+
+
+function backgroundSwitcher(){
+    var images = ["assets/images/lunch-1-min.jpg","assets/images/snacks-2-min.jpg","assets/images/beverages-3-min.jpg","assets/images/lunch-4-min.jpg", "assets/images/snacks-4-min.jpg",  "assets/images/regular-4-min.jpg", "assets/images/beverages-1-min.jpg", "assets/images/beverages-2-min.jpg", "assets/images/lunch-2-min.jpg", "assets/images/desserts-5-min.jpg", "assets/images/desserts-4-min.jpg"];
+
+    $('.main').css({
+      'background': 'url(' + images[2] + ') center/cover no-repeat',
+      'background-blend-mode': 'multiply',
+      'position': 'relative',
+      'z-index': '1' 
+    }).prepend('<div class="overlay"></div>'); 
+    var interval = setInterval(function() {
+      var randomIndex = Math.floor(Math.random() * images.length);
+      $('.overlay').fadeOut(400, function() { 
+        $('.main').css({
+          'background': 'url(' + images[randomIndex] + ') center/cover no-repeat',
+          'background-blend-mode': 'multiply'
+        });
+        $(this).fadeIn('fast'); 
+      });
+    }, 5000); 
+}
+
+
+// function slickSliders(){
+//   $('.gallery-slider').slick({
+//     slidesToScroll: 1,
+//     slidesToShow: 1,
+//     autoplay: true,
+//     autoplaySpeed: 1000,
+//     arrows: false,
+//     dots: false,
+//     Infinity: true,
+//   })}

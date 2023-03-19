@@ -156,6 +156,10 @@ p{
     display: flex;
 }
 
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
 .justify-content-space {
     justify-content: space-between;
 }
@@ -259,7 +263,7 @@ p{
 
 header{
     padding: 30px 0;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -407,35 +411,27 @@ header .container{
 .main{
     height: 100vh;
     position: relative;
-    /* background: url(../images/background-3.jpg), linear-gradient(180deg, rgba(0,0,0,0.7) 50%, transparent);
-    background: url(../images/background-3.jpg), rgba(0,0,0,0.5);
-    background-blend-mode: multiply;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; 
-    position: relative;
-    background-color: #333; */
 }
 
-/* .main-slider{
-    background-color: #000;
-}
-
-.main-slider img{
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.5;
-} */
-
+    background-color: black;
+    opacity: 0.7;
+    z-index: -1; 
+    filter: brightness(70%);
+  }
+  
 
 .main .container{
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 20;
     text-align: center; 
-
 }
 
 
@@ -594,18 +590,14 @@ header .container{
     padding: 10px 0;
 }
 
-
-.gallery-slider .flex > div{
-    background-color: #000;
-    width: 300px;
-    height: 130px;
+.gallery-slider div{
+    display: inline-block;
+    margin-right: 10px;
 }
 
-.gallery-slider .flex > div > img{
-    width: 300px;
-    height: 130px;
-    background-color: #000;
-    opacity: 0.9;
+.gallery-slider img{
+    width: 220px;
+    height: 120px;
 }
 
 /* Gallery End */
