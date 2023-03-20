@@ -21,22 +21,3 @@ burger.addEventListener('click', ()=>{
     })
 })
 
-
-
-const form = document.querySelector('#feeback-form');
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const formData = new FormData(form);
-
-  // Convert FormData to plain object
-  const data = {};
-  formData.forEach((value, key) => data[key] = value);
-
-  // Store form data in local storage
-  localStorage.setItem('formData', JSON.stringify(data));
-
-  // Redirect to success page
-  window.location.href = '/success';
-});
