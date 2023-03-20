@@ -28,11 +28,15 @@
     --fs-600: 22px;
     --fs-500: 18px
     --fs-400: 16px 
+
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
 }
 
 body {
     font-family: 'Hind', sans-serif;
     line-height: 1.7;
+    
 }
 
 
@@ -750,7 +754,7 @@ header .container{
 /* Gallery Page */
 .gallery-container img{
     width: 280px;
-    height: 120px;
+    height: 150px;
     border-radius: 8px;
 }
 
@@ -948,6 +952,13 @@ input[type="submit"]:hover {
     color: #fff;
 }
 
+
+iframe{
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
 /* Pages End */
 
 
@@ -1112,6 +1123,7 @@ input[type="submit"]:hover {
     .feedback-container form{
         width: 80%;
     }
+
 
 }   
 

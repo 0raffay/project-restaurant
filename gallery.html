@@ -14,10 +14,6 @@
 
     <!-- ---------icons------- -->
     <script src="https://kit.fontawesome.com/fdda8a7430.js" crossorigin="anonymous"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
 
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
@@ -25,12 +21,25 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- jquery crousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
         integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
-        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="assets/js/jquery.js"></script>
+
+
+    <!-- animations -->
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- text Animate -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
     <!-- script file -->
     <title>Gallery</title>
@@ -79,19 +88,32 @@
         <div class="container">
             <h4>Gallery</h4>
 
-            <div class="gallery-container secondary-page-container">
-                <img src="assets/images/lunch-1-min.jpg" alt="">
-                <img src="assets/images/lunch-2-min.jpg" alt="">
-                <img src="assets/images/lunch-3-min.jpg" alt="">
-                <img src="assets/images/lunch-4-min.jpg" alt="">
-                <img src="assets/images/lunch-5-min.jpg" alt="">
-                <img src="assets/images/lunch-6-min.jpg" alt="">
-                <img src="assets/images/desserts-1-min.jpg" alt="">
-                <img src="assets/images/desserts-2-min.jpg" alt="">
-                <img src="assets/images/desserts-3-min.jpg" alt="">
-                <img src="assets/images/desserts-4-min.jpg" alt="">
-                <img src="assets/images/desserts-5-min.jpg" alt="">
-                <img src="assets/images/desserts-6-min.jpg" alt="">
+            <div class="gallery-container secondary-page-container" data-aos = "fade-down" data-aos-duration = "2000" alt="">
+                <img src="assets/images/lunch-1-min.jpg"  >
+                <img src="assets/images/lunch-2-min.jpg"  >
+                <img src="assets/images/lunch-3-min.jpg"  >
+                <img src="assets/images/lunch-4-min.jpg"  >
+                <img src="assets/images/lunch-5-min.jpg"  >
+                <img src="assets/images/lunch-6-min.jpg"  >
+                <img src="assets/images/desserts-1-min.jpg">
+                <img src="assets/images/desserts-2-min.jpg">
+                <img src="assets/images/desserts-3-min.jpg">
+                <img src="assets/images/desserts-4-min.jpg"  >
+                <img src="assets/images/desserts-5-min.jpg"  
+                <img src="assets/images/desserts-6-min.jpg">
+                
+                <img src="assets/images/lunch-1-min.jpg"  >
+                <img src="assets/images/lunch-2-min.jpg"  >
+                <img src="assets/images/lunch-3-min.jpg"  >
+                <img src="assets/images/lunch-4-min.jpg"  >
+                <img src="assets/images/lunch-5-min.jpg"  >
+                <img src="assets/images/lunch-6-min.jpg"  >
+                <img src="assets/images/desserts-1-min.jpg">
+                <img src="assets/images/desserts-2-min.jpg">
+                <img src="assets/images/desserts-3-min.jpg">
+                <img src="assets/images/desserts-4-min.jpg"  >
+                <img src="assets/images/desserts-5-min.jpg">
+                <img src="assets/images/desserts-6-min.jpg">
                 
 
             </div>
@@ -164,7 +186,10 @@
 
     </footer>
     <script src="assets/js/script.js"></script>
+    <script>
+        AOS.init()
 
+    </script>
 </body>
 
 </html>

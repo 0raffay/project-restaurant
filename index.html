@@ -30,6 +30,20 @@
     <script src="assets/js/jquery.js"></script>
 
 
+    <!-- animations -->
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- text Animate -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+
+
+
     <link rel="icon" type="image/x-icon" href="assets/images/logo.svg">
     <title>Home</title>
 </head>
@@ -75,7 +89,7 @@
 
 
     <section class="main">
-        <div class="container">
+        <div class="container"  data-aos="fade-down"   data-aos-duration="2000">
             <div>
                 <h1>Vinger Food <span>Restaurant</span></h1>
                 <h2>"The Serving Plates"</h2>
@@ -94,7 +108,7 @@
         </div>
     </section>
 
-    <section class="menu">
+    <section class="menu" >
         <div class="container">
             <h4>Menu</h4>
 
@@ -154,7 +168,7 @@
         <div class="container">
             <h4>what we serve</h4>
 
-            <div class="flex justify-content-space gap-20">
+            <div class="flex justify-content-space gap-20" data-aos="fade-right" data-aos-duration="1500">
                 <div class="serve-card">
                     <img src="assets/images/lunch-3-min.jpg" alt="food">
                     <h5>Starters</h5>
@@ -178,7 +192,7 @@
         <div class="container">
             <h4>Services</h4>
 
-            <div class="flex justify-content-space align-items-center">
+            <div class="flex justify-content-space align-items-center" data-aos="fade-right" data-aos-duration="1500">
 
                 <div class="service-card text-center">
                     <i class="fa-solid fa-chair"></i>
@@ -208,7 +222,7 @@
         <div class="container">
             <h4>Gallery</h4>
 
-            <div class="gallery-slider">
+            <div class="gallery-slider" data-aos="fade-down" data-aos-duration="1000">
                 <div>
                     <img src="assets/images/lunch-3-min.jpg" alt="">
                 </div>
@@ -300,6 +314,9 @@
 
     </footer>
     <script src="assets/js/script.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>

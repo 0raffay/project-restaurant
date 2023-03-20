@@ -1,5 +1,4 @@
 
-
 // main background switcher
 $(document).ready(function() {
   backgroundSwitcher()
@@ -29,13 +28,3 @@ function backgroundSwitcher(){
 }
 
 
-// function slickSliders(){
-//   $('.gallery-slider').slick({
-//     slidesToScroll: 1,
-//     slidesToShow: 1,
-//     autoplay: true,
-//     autoplaySpeed: 1000,
-//     arrows: false,
-//     dots: false,
-//     Infinity: true,
-//   })}
