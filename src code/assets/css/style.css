@@ -328,6 +328,10 @@ header .container{
 }
 
 
+.bottom-footer .nav-list li:nth-child(3) a::after{
+    display: block;
+} 
+
 
 
 .meal-list{
@@ -954,7 +958,7 @@ header .container{
 
 .feedback-container input[type="text"],
 .feedback-container  input[type="email"],
-.feedback-container  input[type="tel"],
+.feedback-container  input[type="number"],
  .feedback-container input[type="date"],
 .feedback-container  textarea {
     width: 100%;
@@ -993,6 +997,24 @@ iframe{
     margin: 0 auto;
     max-width: 80%;
 }
+
+
+.form-success{
+    display: none;
+}
+
+
+.form-success h3{
+    color: var(--clr-secondary);
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.form-success h2{
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
 
 /* Pages End */
 

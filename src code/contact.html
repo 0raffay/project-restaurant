@@ -86,12 +86,18 @@
     <section class="contact-main secondary-page-main" data-aos = "fade-down" data-aos-duration = "2000">
         <div class="container text-center">
             <h4>Contact Us</h4>
-            <form>
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
-                <input type="submit" value="Submit" class="btn btn-primary">
-            </form>
+            <div class="contact-container">
+                <form id="contact-form">
+                    <input type="text" placeholder="Name" required >
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <input type="submit" value="Submit" id = "contact-submit" onclick="contactSuccess(event)" class="btn btn-primary">
+                </form>
+            </div>
+            <section class="form-success text-center" id="contact-success">
+                <h3>Thank you for filling out your information! ...</h3>
+                <h2>Your Form Has been Submitted</h2>
+            </section>
 
             <h4 data-aos = "fade-up" data-aos-duration = "2000" >sitemap</h4>
 
@@ -116,10 +122,10 @@
                     <div>
                         <h6>Follow Us</h6>
                         <div class="flex gap-20">
-                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com/home" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
                         </div>
                     </div>
                     <div>

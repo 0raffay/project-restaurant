@@ -94,7 +94,7 @@
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required>
                         <label for="phone">Phone:</label>
-                        <input type="tel" id="phone" name="phone" required>
+                        <input type="number" id="phone" name="phone" required>
                         <label for="visit-date">Date of Visit:</label>
                         <input type="date" id="visit-date" name="visit-date" required>
                         <label for="rating">Rating:</label>
@@ -110,9 +110,13 @@
                         </div>
                         <label for="comments">Comments:</label>
                         <textarea id="comments" name="comments" required></textarea>
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Submit" id = "feedback-submit" onclick="feedbackSuccess(event)">
                     </form>
                 </div>
+                <section class="form-success text-center" id="feedback-success">
+                    <h3>Thank you for filling out your information! ...</h3>
+                    <h2>Your Form Has been Submitted</h2>
+                </section>
             </div>
         </div>
     </section>
@@ -134,10 +138,10 @@
                     <div>
                         <h6>Follow Us</h6>
                         <div class="flex gap-20">
-                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://twitter.com/home" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
                         </div>
                     </div>
                     <div>
